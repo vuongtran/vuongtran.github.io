@@ -1,8 +1,8 @@
 "use strict";
 
 module.exports = {
-  url: "https://lumen.netlify.com",
-  pathPrefix: "/vuongtran.github.io",
+  url: "https://vuongtran.github.io",
+  pathPrefix: "",
   title: "Blog by John Doe",
   subtitle:
     "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
@@ -26,7 +26,7 @@ module.exports = {
     },
   ],
   author: {
-    name: "John Doe",
+    name: "Vuong Tran",
     photo: "/photo.jpg",
     bio:
       "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
