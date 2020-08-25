@@ -1,12 +1,11 @@
 "use strict";
 
 module.exports = {
-  url: "https://vuongtran.github.io",
+  url: "http://vuong.vercel.app",
   pathPrefix: "",
-  title: "Blog by John Doe",
-  subtitle:
-    "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
-  copyright: "© All rights reserved.",
+  title: "Vuongtm",
+  subtitle: "Blog",
+  copyright: "© 2020 Build with Gatsby.",
   disqusShortname: "",
   postsPerPage: 4,
   googleAnalyticsId: "UA-73379983-2",
@@ -16,30 +15,29 @@ module.exports = {
       label: "Articles",
       path: "/",
     },
-    {
-      label: "About me",
-      path: "/pages/about",
-    },
-    {
-      label: "Contact me",
-      path: "/pages/contacts",
-    },
+    // {
+    //   label: "About me",
+    //   path: "/pages/about",
+    // },
+    // {
+    //   label: "Contact me",
+    //   path: "/pages/contacts",
+    // },
   ],
   author: {
     name: "Vuong Tran",
-    photo: "/photo.jpg",
-    bio:
-      "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    photo: "/face.jpg",
+    bio: "Hi there!",
     contacts: {
-      email: "",
-      facebook: "#",
-      telegram: "#",
-      twitter: "#",
-      github: "#",
+      email: "vuongtran.cg@gmail.com",
+      github: "https://github.com/vuongtran",
+      facebook: "",
+      telegram: "",
+      twitter: "",
       rss: "",
       vkontakte: "",
-      linkedin: "#",
-      instagram: "#",
+      linkedin: "",
+      instagram: "",
       line: "",
       gitlab: "",
       weibo: "",
