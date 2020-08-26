@@ -1,14 +1,14 @@
 "use strict";
 
 module.exports = {
-  url: "http://vuong.vercel.app",
+  url: "https://vuong.vercel.app",
   pathPrefix: "",
-  title: "Vuongtm",
+  title: "Vuong Tran",
   subtitle: "Blog",
   copyright: "© 2020 Build with Gatsby.",
   disqusShortname: "",
   postsPerPage: 4,
-  googleAnalyticsId: "UA-73379983-2",
+  googleAnalyticsId: "UA-132550607-1",
   useKatex: false,
   menu: [
     {
@@ -30,7 +30,7 @@ module.exports = {
     bio: "Hi there!",
     contacts: {
       email: "vuongtran.cg@gmail.com",
-      github: "https://github.com/vuongtran",
+      github: "vuongtran",
       facebook: "",
       telegram: "",
       twitter: "",
