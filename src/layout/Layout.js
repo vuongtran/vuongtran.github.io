@@ -1,16 +1,16 @@
-import { useEffect } from "react"
-import theme from "./Theme"
-import { Box } from "theme-ui"
-import PropTypes from "prop-types"
-import Head from "./Head"
-import Style from "./Style"
-import ThemeToggle from "../ui/ThemeToggle"
-import Header from "../ui/Header"
-import Main from "../ui/Main"
-import Footer from "../ui/Footer"
+import { useEffect } from "react";
+import theme from "./Theme";
+import { Box } from "theme-ui";
+import PropTypes from "prop-types";
+import Head from "./Head";
+import Style from "./Style";
+import ThemeToggle from "../ui/ThemeToggle";
+// import Header from "../ui/Header";
+import Main from "../ui/Main";
+import Footer from "../ui/Footer";
 
 // inject inline styles on the body before the page is rendered to avoid the flash of light if we are in dark mode
-let codeToRunOnClient = false
+let codeToRunOnClient = false;
 if (theme.colors.modes && theme.colors.modes.length !== 0) {
   codeToRunOnClient = `
   (function() {
@@ -31,14 +31,14 @@ if (theme.colors.modes && theme.colors.modes.length !== 0) {
         document.body.style.setProperty("--theme-ui-colors-"+colorName, "var(--theme-ui-colors-primary,"+theme.colors.modes[mode][colorName]+")")
       })
     }
-  })()`
+  })()`;
 }
 
 const Layout = (props) => {
   useEffect(() => {
     // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
-    document.body.removeAttribute("style")
-  }, [])
+    document.body.removeAttribute("style");
+  }, []);
 
   return (
     <>
@@ -53,16 +53,16 @@ const Layout = (props) => {
           flexDirection: "column",
         }}
       >
-        {typeof theme.colors.modes === "object" && <ThemeToggle />}
-        <Header />
+        {/* {typeof theme.colors.modes === "object" && <ThemeToggle />} */}
+        {/* <Header /> */}
         <Main>{props.children}</Main>
         <Footer />
       </Box>
 
       <Style />
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   title: PropTypes.string.isRequired,
@@ -70,6 +70,6 @@ Layout.propTypes = {
   url: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
   imageAlt: PropTypes.string,
-}
+};
 
-export default Layout
+export default Layout;

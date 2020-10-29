@@ -1,6 +1,6 @@
-import Wrapper from "../src/layout/Wrapper"
-import Home from "../src/views/Home"
-import config from "../blog.config.js"
+import Wrapper from "../src/layout/Wrapper";
+import Home from "../src/views/Home";
+import config from "../blog.config.js";
 
 const HomePage = () => (
   <Wrapper
@@ -12,6 +12,6 @@ const HomePage = () => (
   >
     <Home />
   </Wrapper>
-)
+);
 
-export default HomePage
+export default HomePage;

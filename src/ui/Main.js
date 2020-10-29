@@ -1,4 +1,4 @@
-import { Box } from "theme-ui"
+import { Box } from "theme-ui";
 
 const Main = (props) => {
   return (
@@ -7,16 +7,17 @@ const Main = (props) => {
       sx={{
         display: "flex",
         flex: 1,
+        flexDirection: "column",
         px: [3, 4],
         pb: 4,
-        alignItems: "center",
+        // alignItems: "center",
         // borderBottom: "solid 1px",
         // borderTop: "solid 1px",
         borderColor: "lite",
       }}
       {...props}
     />
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
