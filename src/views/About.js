@@ -1,15 +1,20 @@
-import { MDXProvider } from "@mdx-js/react"
-import MarkdownContent from "../mdx/about.mdx"
-import Container from "../ui/Container"
+import Image from "next/image";
 
 const About = (props) => {
   return (
-    <MDXProvider>
-      <Container>
-        <MarkdownContent />
-      </Container>
-    </MDXProvider>
-  )
-}
+    <>
+      <h3>About</h3>
 
-export default About
+      <Image
+        src="/photo/face_real.jpg"
+        alt="Picture"
+        width={500}
+        height={500}
+      />
+      <br />
+      <p>I'm working on something new</p>
+    </>
+  );
+};
+
+export default About;

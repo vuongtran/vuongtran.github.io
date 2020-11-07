@@ -8,7 +8,7 @@ import ThemeToggle from "../ui/ThemeToggle";
 // import Header from "../ui/Header";
 import Main from "../ui/Main";
 import Footer from "../ui/Footer";
-
+import Container from "../ui/Container";
 // inject inline styles on the body before the page is rendered to avoid the flash of light if we are in dark mode
 let codeToRunOnClient = false;
 if (theme.colors.modes && theme.colors.modes.length !== 0) {
@@ -53,10 +53,12 @@ const Layout = (props) => {
           flexDirection: "column",
         }}
       >
-        {/* {typeof theme.colors.modes === "object" && <ThemeToggle />} */}
-        {/* <Header /> */}
-        <Main>{props.children}</Main>
-        <Footer />
+        <Container>
+          {/* {typeof theme.colors.modes === "object" && <ThemeToggle />} */}
+          {/* <Header /> */}
+          <Main>{props.children}</Main>
+          <Footer />
+        </Container>
       </Box>
 
       <Style />

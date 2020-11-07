@@ -1,4 +1,5 @@
 import { Box } from "theme-ui";
+import Container from "./Container";
 
 const Main = (props) => {
   return (
@@ -8,15 +9,15 @@ const Main = (props) => {
         display: "flex",
         flex: 1,
         flexDirection: "column",
-        px: [3, 4],
-        pb: 4,
+        // px: [3, 4],
+        // pb: 4,
         // alignItems: "center",
         // borderBottom: "solid 1px",
         // borderTop: "solid 1px",
         borderColor: "lite",
       }}
       {...props}
-    />
+    ></Box>
   );
 };
 

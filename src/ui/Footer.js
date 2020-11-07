@@ -1,27 +1,27 @@
-import { Box, Text } from "theme-ui"
+import { Box, Text } from "theme-ui";
+import Link from "next/link";
 
 const Footer = (props) => (
-  <>
-    <Box
-      sx={{
-        // p: 4,
-        color: "#666",
-        textAlign: "center",
-        fontSize: 1,
-      }}
-    >
-      <Text sx={{ mx: 3, display: "inline-block" }}>@ 2020</Text>
-      {/* <Text sx={{ mx: 3, display: "inline-block" }}>
-      Open sourced on{" "}
-      <a href="https://github.com/johnpolacek/nextjs-mdx-blog-starter">
-        Github
-      </a>
+  <Box
+    as="footer"
+    sx={{
+      color: "#666",
+      textAlign: "center",
+      fontSize: 0,
+      mt: 4,
+    }}
+  >
+    <Text sx={{ mx: 3, display: "inline-block" }}>© 2020</Text>
+    <Text sx={{ mx: 3, display: "inline-block" }}>
+      <Link href="/">/home</Link>
     </Text>
     <Text sx={{ mx: 3, display: "inline-block" }}>
-      Follow <a href="https://twitter.com/johnpolacek">@johnpolacek</a>
-    </Text> */}
-    </Box>
-  </>
-)
+      <Link href="/photo">/photo</Link>
+    </Text>
+    <Text sx={{ mx: 3, display: "inline-block" }}>
+      <Link href="/about">/about</Link>
+    </Text>
+  </Box>
+);
 
-export default Footer
+export default Footer;

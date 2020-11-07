@@ -1,6 +1,6 @@
-import Wrapper from "../src/layout/Wrapper"
-import About from "../src/views/About"
-import config from "../blog.config.js"
+import Wrapper from "../src/layout/Wrapper";
+import About from "../src/views/About";
+import config from "../blog.config.js";
 
 const AboutPage = () => (
   <Wrapper
@@ -12,6 +12,6 @@ const AboutPage = () => (
   >
     <About />
   </Wrapper>
-)
+);
 
-export default AboutPage
+export default AboutPage;
