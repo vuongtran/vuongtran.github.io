@@ -5,12 +5,7 @@ const About = (props) => {
     <>
       <h3>About</h3>
 
-      <Image
-        src="/photo/face_real.jpg"
-        alt="Picture"
-        width={500}
-        height={500}
-      />
+      <Image src="/face_real.jpg" alt="Picture" width={500} height={500} />
       <br />
       <p>I'm working on something new</p>
     </>
