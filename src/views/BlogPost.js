@@ -1,20 +1,20 @@
-import MDX from "@mdx-js/runtime"
-import config from "../../blog.config"
-import { DiscussionEmbed } from "disqus-react"
-import { Box, Text, Heading, Image } from "theme-ui"
-import Link from "next/link"
-import Container from "../ui/Container"
-import CodeBlock from "../ui/CodeBlock"
-import DraftBadge from "../ui/DraftBadge"
+import MDX from "@mdx-js/runtime";
+import config from "../../blog.config";
+import { DiscussionEmbed } from "disqus-react";
+import { Box, Text, Heading, Image } from "theme-ui";
+import Link from "next/link";
+import Container from "../ui/Container";
+import CodeBlock from "../ui/CodeBlock";
+import DraftBadge from "../ui/DraftBadge";
 
 const BlogPost = ({ post }) => {
-  const isLocal = process.env.NODE_ENV === "development"
+  const isLocal = process.env.NODE_ENV === "development";
 
   const components = {
     Box: (props) => <Box {...props} />,
     pre: (props) => <div {...props} />,
     code: CodeBlock,
-  }
+  };
 
   return (
     <Container>
@@ -35,8 +35,8 @@ const BlogPost = ({ post }) => {
             </Heading>
 
             {config.showDate && (
-              <Text sx={{ fontStyle: "italic", fontSize: 0 }}>
-                Updated • {new Date(post.date).toLocaleDateString()}
+              <Text sx={{ fontSize: 0 }}>
+                Posted • {new Date(post.date).toLocaleDateString()}
               </Text>
             )}
           </Box>
@@ -44,8 +44,7 @@ const BlogPost = ({ post }) => {
             <Image
               sx={{
                 mb: 3,
-                border: "1px solid",
-                borderColor: "rgba(0,0,0,.1)",
+                borderRadius: 2,
               }}
               height={post.coverImageHeight}
               width={post.coverImageWidth}
@@ -54,7 +53,7 @@ const BlogPost = ({ post }) => {
             />
           )}
           <MDX components={components}>{post.content}</MDX>
-          {typeof config.disqus === "string" && config.disqus !== "" && (
+          {/* {typeof config.disqus === "string" && config.disqus !== "" && (
             <Box
               sx={{
                 p: 4,
@@ -75,11 +74,11 @@ const BlogPost = ({ post }) => {
                 }}
               />
             </Box>
-          )}
+          )} */}
         </>
       )}
     </Container>
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;

@@ -7,7 +7,7 @@ const About = (props) => {
 
       <Image src="/face_real.jpg" alt="Picture" width={500} height={500} />
       <br />
-      <p>I'm working on something new</p>
+      <p>Thoughts on Frontend development - I'm working on something new</p>
     </>
   );
 };

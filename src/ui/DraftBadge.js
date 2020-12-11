@@ -1,4 +1,4 @@
-import { Text } from "theme-ui"
+import { Text } from "theme-ui";
 
 const DraftBadge = (props) => (
   <Text
@@ -8,16 +8,16 @@ const DraftBadge = (props) => (
       color: "white",
       fontWeight: 400,
       fontSize: 0,
-      py: 2,
+      py: 1,
       px: 2,
       position: "absolute",
       top: "-3px",
       left: "-60px",
-      borderRadius: "2px",
+      borderRadius: "8px",
     }}
   >
     draft
   </Text>
-)
+);
 
-export default DraftBadge
+export default DraftBadge;

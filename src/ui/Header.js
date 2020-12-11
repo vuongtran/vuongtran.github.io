@@ -1,7 +1,7 @@
 // import config from "../../blog.config"
-import { MDXProvider } from "@mdx-js/react"
-import { Box, Heading } from "theme-ui"
-import Nav from "./Nav"
+import { MDXProvider } from "@mdx-js/react";
+import { Box, Heading } from "theme-ui";
+import Nav from "./Nav";
 // import Blurb from "../mdx/blurb.mdx"
 // import Link from "next/link"
 
@@ -18,6 +18,6 @@ const Header = (props) => (
       <Nav />
     </Box>
   </MDXProvider>
-)
+);
 
-export default Header
+export default Header;

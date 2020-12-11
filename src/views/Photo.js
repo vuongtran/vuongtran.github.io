@@ -12,11 +12,6 @@ const images = [
     caption: "",
   },
   {
-    src: "/photo/6.jpg",
-    thumbnail: "/photo/6.jpg",
-    caption: "",
-  },
-  {
     src: "/photo/3.jpg",
     thumbnail: "/photo/3.jpg",
     caption: "",
@@ -29,6 +24,16 @@ const images = [
   {
     src: "/photo/5.jpg",
     thumbnail: "/photo/5.jpg",
+    caption: "",
+  },
+  {
+    src: "/photo/6.jpg",
+    thumbnail: "/photo/6.jpg",
+    caption: "",
+  },
+  {
+    src: "/photo/7.jpg",
+    thumbnail: "/photo/7.jpg",
     caption: "",
   },
 ];

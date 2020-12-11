@@ -1,7 +1,7 @@
-import Head from "next/head"
-import PropTypes from "prop-types"
-import config from "../../blog.config"
-import GoogleFonts from "next-google-fonts"
+import Head from "next/head";
+import PropTypes from "prop-types";
+import config from "../../blog.config";
+import GoogleFonts from "next-google-fonts";
 
 const DocHead = (props) => (
   <>
@@ -34,7 +34,7 @@ const DocHead = (props) => (
       )}
     </Head>
   </>
-)
+);
 
 DocHead.propTypes = {
   title: PropTypes.string.isRequired,
@@ -43,6 +43,6 @@ DocHead.propTypes = {
   imageUrl: PropTypes.string,
   imageAlt: PropTypes.string,
   twitter: PropTypes.string,
-}
+};
 
-export default DocHead
+export default DocHead;

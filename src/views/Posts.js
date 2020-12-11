@@ -1,47 +1,37 @@
-import MDX from "@mdx-js/runtime"
-import { Flex, Box, Heading, Text, Image } from "theme-ui"
-import Container from "../ui/Container"
-import DraftBadge from "../ui/DraftBadge"
-import Link from "next/link"
+// import MDX from "@mdx-js/runtime";
+import { Flex, Box, Heading, Text, Image } from "theme-ui";
+import DraftBadge from "../ui/DraftBadge";
+import Link from "next/link";
 
 const Posts = ({ posts, prevPosts, nextPosts }) => {
-  const isLocal = process.env.NODE_ENV === "development"
+  const isLocal = process.env.NODE_ENV === "development";
 
   return (
-    <Container>
+    <>
+      <Heading as="h1" sx={{ pb: 2, position: "relative" }}>
+        All posts
+      </Heading>
       {posts &&
         posts
           .filter((post) => {
-            return isLocal || !post.draft
+            return isLocal || !post.draft;
           })
           .map((post) => (
-            <Box sx={{ pb: 5 }} key={post.slug}>
-              <Heading sx={{ pb: 2, position: "relative" }}>
-                {/* {post.draft && <DraftBadge />} */}
+            <Box sx={{ pb: 2 }} key={post.slug}>
+              <Heading as="h3" sx={{ pb: 2, position: "relative" }}>
                 <Link href={"/" + post.slug} passHref>
-                  {post.title}
+                  <Text sx={{ cursor: "pointer" }}>{post.title}</Text>
                 </Link>
+                {post.draft && <DraftBadge />}
               </Heading>
-              {post.coverImage && (
-                <Image
-                  sx={{
-                    mt: 2,
-                    mb: 3,
-                    border: "1px solid",
-                    borderColor: "rgba(0,0,0,.1)",
-                  }}
-                  height={post.coverImageHeight}
-                  width={post.coverImageWidth}
-                  src={post.coverImage}
-                  alt={post.coverImageAlt || ""}
-                />
-              )}
-              <Box sx={{ pb: 3 }}>
-                <MDX>{post.excerpt}</MDX>
+              <Box sx={{ pb: 2 }}>
+                <Text sx={{ fontStyle: "italic", fontSize: 0 }}>
+                  {new Date(post.date).toLocaleDateString()}
+                </Text>
               </Box>
-              <Link href={"/" + post.slug} passHref>
+              {/* <Link href={"/" + post.slug} passHref>
                 <a>Read more...</a>
-              </Link>
+              </Link> */}
             </Box>
           ))}
       <Flex sx={{ fontStyle: "italic" }}>
@@ -60,8 +50,8 @@ const Posts = ({ posts, prevPosts, nextPosts }) => {
           )}
         </Box>
       </Flex>
-    </Container>
-  )
-}
+    </>
+  );
+};
 
-export default Posts
+export default Posts;

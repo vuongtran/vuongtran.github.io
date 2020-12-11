@@ -2,7 +2,7 @@ export default {
   useCustomProperties: true,
   useColorSchemeMediaQuery: true,
   fonts: {
-    body: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
+    body: `system-ui, -apple-system, Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
     heading: "inherit",
   },
   fontSizes: [14, 16, 18, 20, 24, 30, 36, 40, 48, 64, 72, 96],
@@ -56,4 +56,4 @@ export default {
     inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
     none: "none",
   },
-}
+};
