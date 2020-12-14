@@ -41,3 +41,9 @@ export function getAllPosts(fields = []) {
     .sort((post1, post2) => (post1.date > post2.date ? "-1" : "1"));
   return posts;
 }
+
+export function getAllPhotos() {
+  // TODO
+  const photosDirectory = join(process.cwd(), "public/photo");
+  return [];
+}

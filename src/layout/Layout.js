@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import Head from "./Head";
 import Style from "./Style";
 import ThemeToggle from "../ui/ThemeToggle";
-// import Header from "../ui/Header";
+import Header from "../ui/Header";
 import Main from "../ui/Main";
 import Footer from "../ui/Footer";
 import Container from "../ui/Container";
@@ -55,7 +55,7 @@ const Layout = (props) => {
       >
         <Container>
           {/* {typeof theme.colors.modes === "object" && <ThemeToggle />} */}
-          {/* <Header /> */}
+          <Header />
           <Main>{props.children}</Main>
           <Footer />
         </Container>

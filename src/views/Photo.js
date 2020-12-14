@@ -1,48 +1,62 @@
-import Gallery from "react-grid-gallery";
+import React from "react";
+import Gallery from "react-photo-gallery";
+import { Heading } from "theme-ui";
 
 const images = [
   {
     src: "/photo/1.jpg",
-    thumbnail: "/photo/1.jpg",
-    caption: "",
+    width: 4,
+    height: 3,
   },
   {
     src: "/photo/2.jpg",
-    thumbnail: "/photo/2.jpg",
-    caption: "",
+    width: 4,
+    height: 3,
   },
   {
     src: "/photo/3.jpg",
-    thumbnail: "/photo/3.jpg",
-    caption: "",
+    width: 4,
+    height: 3,
   },
   {
     src: "/photo/4.jpg",
-    thumbnail: "/photo/4.jpg",
-    caption: "",
+    width: 4,
+    height: 3,
   },
   {
     src: "/photo/5.jpg",
-    thumbnail: "/photo/5.jpg",
-    caption: "",
+    width: 4,
+    height: 3,
   },
   {
     src: "/photo/6.jpg",
-    thumbnail: "/photo/6.jpg",
-    caption: "",
+    width: 4,
+    height: 3,
   },
   {
     src: "/photo/7.jpg",
-    thumbnail: "/photo/7.jpg",
-    caption: "",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "/photo/8.jpg",
+    width: 3,
+    height: 4,
   },
 ];
 
 function Photo() {
+  const openLightbox = (event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  };
+
   return (
     <>
-      <h3>Photo</h3>
-      <Gallery images={images} />
+      <Heading as="h1" sx={{ pb: 2, position: "relative" }}>
+        Photos
+      </Heading>
+      <Gallery photos={images} />
     </>
   );
 }

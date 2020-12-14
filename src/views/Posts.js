@@ -1,7 +1,8 @@
 // import MDX from "@mdx-js/runtime";
-import { Flex, Box, Heading, Text, Image } from "theme-ui";
+import { Flex, Box, Heading, Text } from "theme-ui";
 import DraftBadge from "../ui/DraftBadge";
 import Link from "next/link";
+import Emoji from "../ui/Emoji";
 
 const Posts = ({ posts, prevPosts, nextPosts }) => {
   const isLocal = process.env.NODE_ENV === "development";
@@ -10,6 +11,9 @@ const Posts = ({ posts, prevPosts, nextPosts }) => {
     <>
       <Heading as="h1" sx={{ pb: 2, position: "relative" }}>
         All posts
+        <p>
+          <Emoji symbol="👨‍💻🔥🎉" />
+        </p>
       </Heading>
       {posts &&
         posts

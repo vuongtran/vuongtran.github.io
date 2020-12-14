@@ -24,7 +24,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^3.1.2",
-    "react-grid-gallery": "^0.5.5",
+    "react-photo-gallery": "^8.0.0",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import Link from "next/link"
+import { jsx } from "theme-ui";
+import Link from "next/link";
 
 const NavLink = ({ href, active, children }) => (
   <Link href={href}>
@@ -24,6 +24,6 @@ const NavLink = ({ href, active, children }) => (
       {children}
     </a>
   </Link>
-)
+);
 
-export default NavLink
+export default NavLink;
